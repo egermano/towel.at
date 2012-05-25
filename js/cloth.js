@@ -330,11 +330,9 @@ var CL = {
     init_gl: function (canvas) {
         var gl;
 
-        gl = canvas.getContext( 'experimental-webgl', {
-            depth: true
-        } );
-        if( gl === null ) {
-            throw( 'Could not initialize WebGL' );
+        gl = canvas.getContext( 'experimental-webgl', {depth: true});
+        if (gl === null) {
+            throw "webgl";
         }
         //Set the viewport size equal to the canvas size
         gl.viewport( 0, 0, canvas.width, canvas.height );
@@ -351,10 +349,11 @@ var CL = {
         gl.clear( gl.COLOR_BUFFER_BIT );
 
         if (!gl.getExtension("OES_texture_float")) {
-            alert('Your WebGL implementation does not support "OES_texture_float" extension');
+            throw "webgl";
+
         }
         if (!gl.getParameter(gl.MAX_VERTEX_TEXTURE_IMAGE_UNITS)) {
-            alert('Your WebGL implementation does not support texture fetching in vertex shader');
+            throw "webgl";
         }
 
         return gl;
@@ -367,26 +366,43 @@ var CL = {
         s2speeds: {}
     },
 
-    init: function () {
+    setup: function (onerror) {
         var window_width = $(window).width();
         var window_height = $(window).height();
 
         // Create the canvas
-        var canvas = document.createElement( 'canvas' );
+        var canvas = document.createElement('canvas');
         canvas.width = window_width;
         canvas.height = window_height;
         document.body.appendChild(canvas);
 
-        var gl = CL.init_gl(canvas);
+        try {
+            var gl = CL.init_gl(canvas);
+        }
+        catch (e) {
+            onerror();
+            return;
+        }
 
         CL.init_shaders(gl, function (programs) {
-            CL.init_2(gl, programs, window_width, window_height, canvas);
+            //CL.start(gl, programs, window_width, window_height, canvas);
+            CL.gl = gl;
+            CL.programs = programs;
+            CL.window_width = window_width;
+            CL.window_height = window_height;
+            CL.canvas = canvas;
         });
     },
 
-    init_2: function (gl, programs, window_width, window_height, canvas) {
-        CL.programs = programs;
-        CL.gl = gl;
+    start: function () {
+        var gl = CL.gl;
+        var programs = CL.programs;
+        var window_width = CL.window_width;
+        var window_height = CL.window_height;
+        var canvas = CL.canvas;
+
+        $('canvas').show();
+
         //var wind = [ 0.5, -0.2, 0.3 ];
         var wind = [0.01, 0.1, 0.1];
 

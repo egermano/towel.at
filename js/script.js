@@ -13,6 +13,9 @@ var Towel = {
 			this.form();
 		}
 
+		CL.setup(function () {
+			alert("PANIC! you don't have webGL");
+		});
 	},
 	form: function(){
 		$('#urlForm').click('submit', function(e){
@@ -52,7 +55,7 @@ var Towel = {
 		});
 
 		// monta a toalha
-		CL.init();
+		CL.start();
 	},
 	testUrl : function(url){
 		var reTest = new RegExp(/((?:http|https):\/\/[a-z0-9\/\?=_#&%~-]+(\.[a-z0-9\/\?=_#&%~-]+)+)|(www(\.[a-z0-9\/\?=_#&%~-]+){2,})/);
