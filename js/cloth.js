@@ -584,7 +584,6 @@ var CL = {
         }
 
         var squareDrawable = new Drawable( { mesh: square, uvcoords: square.uvcoords, material: speeds_shader }, gl );
-        console.log(squareDrawable.getMatrix());
 
         var fb = gl.createFramebuffer();
         var temp = makeFloatTexture( null );
