@@ -65,11 +65,23 @@ td { vertical-align: top; }
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
 
 .center {margin: 0 auto;}
+html, body{
+  overflow-y: hidden;
+}
+
+body{
+  margin-top:40px;
+}
+
+.fb-like{
+  margin-top:8px;
+}
 
 #main .logo{
-  margin-top: 150px;
-  width: 275px;
-  height: 95px;
+  margin-top: 100px;
+  width: 550px;
+  height: 155px;
+  background-image: url('../img/logo.jpg');
 }
 #main .content{
   width: 550px;
