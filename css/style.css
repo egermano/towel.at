@@ -64,6 +64,8 @@ td { vertical-align: top; }
 
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
 
+.center {margin: 0 auto;}
+
 #main .logo{
   margin-top: 150px;
   width: 275px;
