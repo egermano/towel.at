@@ -9,7 +9,7 @@ var Towel = {
 			console.log(location.pathname.substr(1));
 			this.pages.towel();
 		}
-		
+
 		$('nav.nav-collapse ul li a').click(function(){
 			history.pushState({teste:true}, 'towel.at', $(this).attr('href'));
 
@@ -60,6 +60,7 @@ var Towel = {
 			});
 
 			// monta a toalha
+			CL.init();
 		}
 	}
 }
