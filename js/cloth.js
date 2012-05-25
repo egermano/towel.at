@@ -403,6 +403,7 @@ var CL = {
             speeds_shader.inputs.bstop.value = false;
             setTimeout(function () {
                 $(canvas).remove();
+                clearInterval(CL.timer);
             }, 3500);
         });
 
@@ -715,7 +716,7 @@ var CL = {
             renderSpeeds(normals_shader, 's2normals', programs.normals);
         }
 
-        setInterval( function() {
+        CL.timer = setInterval(function() {
             tick();
             tick();
             tick();
