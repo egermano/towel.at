@@ -9,6 +9,15 @@
 	<title>About Towel.at</title>
 	<meta name="description" content="Don't Panic! We have a towel!">
 
+	<!-- Inicio meta_facebook -->
+	<meta property="og:image" content="http://towel.at/img/avatar.jpg"/>
+	<meta property="og:title" content="About Towel.at"/>
+	<meta property="og:url" content="http://towel.at/"/>
+	<meta property="og:site_name" content="Towel.at"/>
+	<meta property="og:description" content="Don't Panic! We have a towel!"/>
+	<meta property="og:type" content="website"/>
+	<!-- fim meta_facebook -->
+
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="http://towel.at/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://towel.at/css/bootstrap-responsive.min.css">
@@ -58,10 +67,11 @@
 			<h3>Team</h3>
 			<p>
 				<ul class="unstyled">
-					<li><a href="http://egermano.com">Bruno Germano</a> - Web Dev</li>
-					<li>Cesar Canassa - Web Dev</li>
-					<li>Fred Felix - Designer</li>
-					<li>Thiago Crucciti - Sponsor</li>
+					<li><a href="http://egermano.com">Bruno Germano</a></li>
+					<li>Cesar Canassa</li>
+					<li>Fred Felix</li>
+					<li>Fernando Segredo</li>
+					<li>Thiago Crucciti</li>
 				</ul>
 			</p>
 			<h3>Tech</h3>
@@ -71,6 +81,8 @@
 					<li>CSS3</li>
 					<li>JavaScript</li>
 					<li>WebGL</li>
+					<li><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></li>
+					<li><a href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a></li>
 				</ul>
 			</p>
 			<h3>Sorce</h3>
@@ -92,7 +104,7 @@
 	<script src="http://towel.at/js/script.js"></script>
 
 	<script>
-		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+		var _gaq=[['_setAccount','UA-32142061-1'],['_trackPageview']];
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 		s.parentNode.insertBefore(g,s)}(document,'script'));
