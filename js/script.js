@@ -48,8 +48,8 @@ var Towel = {
 			});
 		});
 
-			// monta a toalha
-			CL.init();
+		// monta a toalha
+		CL.init();
 	},
 	testUrl : function(url){
 		var reTest = new RegExp(/((?:http|https):\/\/[a-z0-9\/\?=_#&%~-]+(\.[a-z0-9\/\?=_#&%~-]+)+)|(www(\.[a-z0-9\/\?=_#&%~-]+){2,})/);
