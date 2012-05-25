@@ -87,6 +87,8 @@
 			<h3>Sorce</h3>
 			<p>All sources are in our <a href="http://github.com/egermano/towel.at">github</a> repo.</p>
 			<br><br>
+			<p>Proudly made in Brazil!</p>
+			<br><br>
 			<p>Thanks Douglas Adams</p>
 		</div>
 		
