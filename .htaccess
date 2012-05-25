@@ -403,6 +403,15 @@ FileETag None
 #   RewriteRule ^ https://example-domain-please-change-me.com%{REQUEST_URI} [R=301,L]
 # </IfModule>
 
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond $1 ^(about)
+  RewriteRule ^(.*)$ about.html/ [L]
+  RewriteCond $1 !^(index\.html|img|js|css|script\.js|about|404)
+  RewriteRule ^(.*)$ index.html/$1 [L]
+</IfModule>
+
 
 
 # ----------------------------------------------------------------------
