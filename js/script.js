@@ -23,6 +23,9 @@ var Towel = {
 
 			history.pushState({teste:true}, 'towel.at', '/'+url);
 			Towel.towel(url);
+
+			_gaq.push(['_trackEvent', 'Towel', 'GO', url]);
+
 			return false;
 		})
 	},
