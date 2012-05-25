@@ -72,7 +72,7 @@
 		CL.BASE_URL = '/';
 	</script>
 
-	<script src="js/script.js"></script>
+	<script src="/js/script.js"></script>
 
 	<script>
 		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
