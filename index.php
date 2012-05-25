@@ -18,7 +18,6 @@
 	<meta property="og:type" content="website"/>
 	<!-- fim meta_facebook -->
 
-	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="/css/style.css">

@@ -18,7 +18,6 @@
 	<meta property="og:type" content="website"/>
 	<!-- fim meta_facebook -->
 
-	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="http://towel.at/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://towel.at/css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="http://towel.at/css/style.css">
