@@ -16,6 +16,9 @@ var Towel = {
 		CL.setup(function () {
 			alert("PANIC! you don't have webGL");
 		});
+
+		// pre load da textura
+		var img = $('<img/>').attr('src', '/img/towel.jpg').load();
 	},
 	form: function(){
 		$('#urlForm').click('submit', function(e){

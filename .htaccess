@@ -42,9 +42,9 @@
 # enable-cors.org
 # code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
 
-#  <IfModule mod_headers.c>
-#    Header set Access-Control-Allow-Origin "*"
-#  </IfModule>
+ <IfModule mod_headers.c>
+   Header set Access-Control-Allow-Origin "*"
+ </IfModule>
 
 
 # ----------------------------------------------------------------------
@@ -404,16 +404,10 @@ FileETag None
 # </IfModule>
 
 <IfModule mod_rewrite.c>
-  # RewriteCond %{REQUEST_FILENAME} !-f
-  # RewriteCond %{REQUEST_FILENAME} !-d
-  # RewriteCond $1 ^(about)
-  # RewriteRule ^(.*)$ about.php/ [L]
-  # RewriteCond $1 !^(index\.php|img|js|css|about|404)
-  # RewriteRule ^(.*)$ index.php/$1 [L]
-
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ index.php/$1 [L]
+  RewriteCond $1 !^(index\.php|img|js|css|about|404)
+  RewriteRule ^(.*)$ index.php?$1 [L]
 </IfModule>
 
 

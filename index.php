@@ -18,7 +18,6 @@
 	<meta property="og:type" content="website"/>
 	<!-- fim meta_facebook -->
 
-	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="/css/style.css">
@@ -72,7 +71,7 @@
 		CL.BASE_URL = '/';
 	</script>
 
-	<script src="js/script.js"></script>
+	<script src="/js/script.js"></script>
 
 	<script>
 		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

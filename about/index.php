@@ -18,7 +18,6 @@
 	<meta property="og:type" content="website"/>
 	<!-- fim meta_facebook -->
 
-	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="http://towel.at/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://towel.at/css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="http://towel.at/css/style.css">
@@ -87,6 +86,8 @@
 			</p>
 			<h3>Sorce</h3>
 			<p>All sources are in our <a href="http://github.com/egermano/towel.at">github</a> repo.</p>
+			<br><br>
+			<p>Proudly made in Brazil!</p>
 			<br><br>
 			<p>Thanks Douglas Adams</p>
 		</div>
