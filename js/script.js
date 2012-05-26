@@ -22,28 +22,37 @@ var Towel = {
 			else {
 				CL.setup(function () {
 					alert("PANIC! you don't have webGL");
-				}, this.form);
+				}, this.bind_form);
 			}
 
 		}
 	},
-	form: function(){
-		$('#urlForm').click('submit', function(e){
-			var url = $('#appendedInputButton').val();
+	bind_form: function () {
+		// On ENTER
+		$('#appendedInputButton').keypress(function (e) {
+			if (e.which === 13) {
+				Towel.open_iframe();
+			}
+		});
 
-			if(!Towel.testUrl(url))
-				return false;
+		// On button click
+		$('#urlForm').click('submit', Towel.open_iframe);
+	},
+	open_iframe: function(){
+		var url = $('#appendedInputButton').val();
 
-			history.pushState({teste:true}, 'towel.at', '/'+url);
-			Towel.towel(url);
-
-			// monta a toalha
-			CL.start();
-
-			_gaq.push(['_trackEvent', 'Towel', 'GO', url]);
-
+		if(!Towel.testUrl(url))
 			return false;
-		})
+
+		history.pushState({teste:true}, 'towel.at', '/'+url);
+		Towel.towel(url);
+
+		// monta a toalha
+		CL.start();
+
+		_gaq.push(['_trackEvent', 'Towel', 'GO', url]);
+
+		return false;
 	},
 	towel : function(url){
 		var iframe = $('<iframe id="site" border="0" noborder="noborder" frameborder="0" padding="0" spacing="0"/>')
