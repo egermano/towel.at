@@ -16,10 +16,10 @@ precision highp float;
 /* how speed components are reduced */
 //#define SLOWDOWN_TANGENT (0.96)
 #define SLOWDOWN_TANGENT (0.98)
-#define SLOWDOWN_NORMAL  (0.92)
+#define SLOWDOWN_NORMAL  (0.93)
 
 /* how springs force is reduced */
-#define REDUCTION_ALL    (0.5)
+#define REDUCTION_ALL    (0.4)
 //#define REDUCTION_ORTH   (REDUCTION_ALL*1.0)
 #define REDUCTION_ORTH   (REDUCTION_ALL*1.5)
 //#define REDUCTION_DIAG   (REDUCTION_ALL*0.9)
@@ -28,7 +28,7 @@ precision highp float;
 //#define REDUCTION_ORTH2  (REDUCTION_ALL*0.8)
 #define REDUCTION_DIAG2  (REDUCTION_ALL*0.9)
 #define REDUCTION_DIAG2  (REDUCTION_ALL*1.1)
-#define GRAVITY          (1.0/(10.0*1024.0))
+#define GRAVITY          (1.5/(10.0*1024.0))
 
 uniform sampler2D s2speeds;
 uniform sampler2D s2positions;

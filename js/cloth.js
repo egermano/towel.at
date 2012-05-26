@@ -325,7 +325,7 @@ var Drawable = function( data, gl ) {
 
 
 var CL = {
-    BASE_URL: '/static/cloth/js/shaders/',
+    BASE_URL: '/static/cloth/',
 
     init_gl: function (canvas) {
         var gl;
@@ -366,7 +366,7 @@ var CL = {
         s2speeds: {}
     },
 
-    setup: function (onerror) {
+    setup: function (onerror, success) {
         var window_width = $(window).width();
         var window_height = $(window).height();
 
@@ -391,6 +391,8 @@ var CL = {
             CL.window_width = window_width;
             CL.window_height = window_height;
             CL.canvas = canvas;
+
+            success();
         });
     },
 
@@ -420,7 +422,7 @@ var CL = {
             setTimeout(function () {
                 $(canvas).remove();
                 clearInterval(CL.timer);
-            }, 3500);
+            }, 5000);
         });
 
         function makeFloatTexture(data) {
@@ -481,6 +483,9 @@ var CL = {
         speeds_shader.attributes.UVCoord = gl.getAttribLocation(programs.speeds, 'inUVCoord');
         speeds_shader.attributes.Position = gl.getAttribLocation(programs.speeds, 'inPosition');
 
+        // Sara BUG
+        speeds_shader.inputs.s2positions.value = CL.uniforms.s2positions.value;
+
         /////////////
         // Normals //
         /////////////
@@ -513,7 +518,7 @@ var CL = {
         speeds_shader.inputs.bstop.value = true;
 
         var flag_texture;
-        CL.load_texture(gl, CL.BASE_URL + 'img/towel.jpg', true, function (texture) {
+        CL.load_texture(gl, CL.BASE_URL + 'img/cloth.jpg', true, function (texture) {
             //flag_texture = texture;
             CL.uniforms.s2flag.value = texture;
         });
@@ -736,12 +741,12 @@ var CL = {
             tick();
             tick();
             tick();
-            tick();
-            tick();
-            tick();
-            tick();
-            tick();
-            tick();
+            //tick();
+            //tick();
+            //tick();
+            //tick();
+            //tick();
+            //tick();
             //Dont fuck with this, black magic
             //gl.getParameter( gl.DEPTH_CLEAR_VALUE );
 

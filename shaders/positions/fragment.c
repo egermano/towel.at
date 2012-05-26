@@ -14,7 +14,7 @@ void main()
     vec3 speed = texture2D(s2speeds, UVCoord).xyz;
     vec3 pos = texture2D(s2positions, UVCoord).xyz;
 
-    pos += speed * 0.3;
+    pos += speed * 0.35;
 
     //check sphere 1 collision
     //if(distance(pos,sph)<0.7)
