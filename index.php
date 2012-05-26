@@ -36,12 +36,13 @@
 						<span class="icon-bar"></span>
 					</a>
 					<a class="brand" href="http://towel.at/">towel.at</a>
+					<div class="fb-like pull-right" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false" data-colorscheme="dark"></div>
+
 					<nav class="nav-collapse">
 						<ul class="nav">
 							<li><a href="/about">About</a></li>
 						</ul>
 					</nav><!--/.nav-collapse -->
-					<div class="fb-like pull-right" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false" data-colorscheme="dark"></div>
 				</div>
 			</div>
 		</div>
