@@ -123,10 +123,10 @@ void main()
         }
     }
 
-    if (bstop &&
-        ((UVCoord.s > 0.95 && UVCoord.t > 0.95) ||
-         (UVCoord.s > 0.95 && UVCoord.t < 0.05))) {
-        speed = vec3(0.0, 0.0, 0.0);
+    if (bstop) {
+        if (UVCoord.s > 0.95) {
+            speed = vec3(0.0, 0.0, 0.0);
+        }
     }
 
     //speed = 0.0
