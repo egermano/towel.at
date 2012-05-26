@@ -67,7 +67,7 @@
 			<p>
 				<ul class="unstyled">
 					<li><a href="http://egermano.com">Bruno Germano</a></li>
-					<li>Cesar Canassa</li>
+					<li><a href="http://canassa.com/">Cesar Canassa</a></li>
 					<li>Fred Felix</li>
 					<li>Fernando Segredo</li>
 					<li>Thiago Crucciti</li>
@@ -82,6 +82,7 @@
 					<li>WebGL</li>
 					<li><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></li>
 					<li><a href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a></li>
+					<li>Cloth shaders <a href="http://www.kamibu.com/demos/cloth-simulation/">credits</a>
 				</ul>
 			</p>
 			<h3>Sorce</h3>
@@ -91,7 +92,7 @@
 			<br><br>
 			<p>Thanks Douglas Adams</p>
 		</div>
-		
+
 	</div>
 	<footer>
 
