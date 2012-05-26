@@ -27,6 +27,9 @@ var Towel = {
 
 		}
 	},
+	add_http: function (url) {
+		return (url.slice(0, 4) === 'http' ? '' : 'http://') + url;
+	},
 	bind_form: function () {
 		// On ENTER
 		$('#appendedInputButton').keypress(function (e) {
@@ -54,19 +57,20 @@ var Towel = {
 
 		return false;
 	},
-	towel : function(url){
+	towel : function(url) {
+
 		var iframe = $('<iframe id="site" border="0" noborder="noborder" frameborder="0" padding="0" spacing="0"/>')
 		.css({
 			'width': '100%'
 		})
-		.attr('src', url)
+		.attr('src', Towel.add_http(url))
 		.height($(window).height()-40);
 
 		$(window).resize(function(){
 			$('#site').height($(window).height()-40);
 		});
 
-		$('head title').append(' '+url);
+		$('head title').append(' ' + url);
 
 		$('#main').fadeOut(function(){
 			$('#main *').remove();
