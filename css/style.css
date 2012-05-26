@@ -74,7 +74,10 @@ body#about{
 }
 
 body{
-  margin-top:0px;
+  margin-top:40px;
+}
+canvas{
+  margin-top:40px;
 }
 
 .fb-like{
